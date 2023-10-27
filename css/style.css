@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2? keluarga= Pasir Hisap:wght@600 &family= Signika & display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: #fff;
+    --bg-blue: #292643;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Signika', sans-serif;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.header {
+    background-color: var(--bg-blue);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: var(--white-color)
+}
+
+.title {
+    color: var(--white-color);
+}
+
+.nav-head {
+    width: 60%;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-item {
+    list-style: none;
+}
+.nav-item a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 22px;
+}
+
+.icon {
+    cursor: pointer;
+    color: var(--white-color);
+}
+
+/* Media query for responsiveness */
+.header .nav-head .icon:nth-child(2) {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header .nav-head .icon:nth-child(2) {
+        display: inline-block;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background-color: #292643;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px;
+    }
+
+    .icon {
+        display: inline-block;
+    }
+}
+
+.orderNow {
+    background-image: url("/img/Sepatuku.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 120%;
+    margin: 1% auto;
+    padding: 2%;
+}
+
+.btnorder {
+    display: block;
+    padding: 10px;
+    color: var(--white-color);
+    background-color: #588157;
+    cursor: pointer;
+    margin: 1px auto;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.btnorder:hover {
+    background-color: #3A5A40;
+}
+
+.footer {
+    background-color: var(--bg-blue);
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    margin-top: 50px;
+}
+
+.copyright {
+    color: var(--white-color);
+    justify-content: start;
+}
+
+.contact {
+    color: var(--white-color);
+    font-size: 20px;
+    justify-content: start;
+}
+
+.Us {
+    color: var(--white-color);
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.follow {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.socialMedia {
+    color: var(--white-color);
+    font-size: 20px;
+}
+
+.icon a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.slide-show {
+    display: flex;
+    align-items: center;
+}
+
+.slide-item {
+    width: 400px;
+    height: 400px;
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-position: center;
+    background-size: cover;
+}
+
+.next,
+.prev {
+    background-image: url("/img/next1.png");
+    width: 57px;
+    height: 93px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.prev {
+    background-image: url("/img/prev1.png");
+}
+
+.img {
+    background-image: url("/img/next1.png");
+    width: 100px;
+    height: 100px;
+}
+
+.slideshow {
+    font-size: 46px;
+    font-weight: 600;
+}
+
+.Library {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.titleLibrary {
+    font-size: 46px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.paragraphLibrary {
+    font-weight: 600;
+}
+
+.container-shoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 10px;
+}
+
+.libraryItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #E4E4E4;
+    box-shadow: 2px 2px 2px 1px rgba(80, 80, 80, 0.5)
+}
+
+.Image {
+    width: 350px;
+    margin: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+@media screen and (min-width: 500px) {
+
+    /* Gaya CSS yang akan diterapkan jika lebar layar lebih besar atau sama dengan 768px */
+    .container-shoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* Anda dapat menambahkan lebih banyak aturan CSS di sini */
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /* Gaya CSS yang akan diterapkan jika lebar layar lebih besar atau sama dengan 768px */
+    .footer {
+        flex-direction: column;
+    }
+
+    .container-shoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 5px;
+        margin: 10px;
+        /* Anda dapat menambahkan lebih banyak aturan CSS di sini */
+    }
+
+    .container-shoes.libraryItem {
+        flex-direction: column;
+    }
+
+    /* Anda dapat menambahkan lebih banyak aturan CSS di sini */
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* Gaya CSS yang akan diterapkan jika lebar layar lebih besar atau sama dengan 768px */
+    .footer {
+        flex-direction: row;
+    }
+
+    .container-shoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 5px;
+        margin: 10px;
+        /* Anda dapat menambahkan lebih banyak aturan CSS di sini */
+    }
+
+
+
+    /* Anda dapat menambahkan lebih banyak aturan CSS di sini */
+}
